@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+  </head>
+
+  <body>
+    <header id="top" class="heading">
+      <button class="hamburger hamburger--js" aria-label="otwórz menu">
+        🍔
+      </button>
+      <p class="heading__title heading__title--js">
+        WTF<span class="span">: Co ten frontend</span>?
+      </p>
+      <p class="heading__paragraph heading__paragraph--js">Moje notatki</p>
+
+      <nav class="navigation navigation--js">
+        <a class="navigation__link" href="index.html" target="_blank"
+          >Strona główna</a
+        >
+        <a class="navigation__link" href="html.html" target="_blank">HTML</a>
+        <a class="navigation__link" href="css.html" target="_blank">CSS</a>
+        <a class="navigation__link" href="javascript.html" target="_blank"
+          >JavaScript</a
+        >
+        <a class="navigation__link" href="browser.html" target="_blank"
+          >Przeglądarka</a
+        >
+        <a class="navigation__link" href="terminal.html" target="_blank"
+          >Terminal</a
+        >
+        <a class="navigation__link" href="spis-tresci.html" target="_blank"
+          >Spis lekcji</a
+        >
+      </nav>
+    </header>
+
+    <main class="mainn">
+      <h1 class="mainn__header">Wszystko o CSS</h1>
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part I</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Co to jest CSS?</h3>
+
+          <p class="lesson__text">
+            CSS Cascading Style Sheets - Kaskadowe Arkusze Stylów:
+          </p>
+          <ul class="lesson__list">
+            <li class="lesson__list-item">
+              Odpowiadają za prezentację treści strony, wygląd elementów HTML na
+              ekranie,wydrukach itp.
+            </li>
+            <li class="lesson__list-item">
+              Nie mają jednej wersji (rozwój modułów), potocznie mówi się, że
+              aktualna wersja to 3.
+            </li>
+            <li class="lesson__list-item">
+              Przeglądarki potrafią różnie interpretować CSS co prowadzi do
+              tego, że pisanie stylów powoduje wiele frustracji u programistów
+              (ale jest też niezłym wyzwaniem :)).
+            </li>
+            <li class="lesson__list-item">
+              Całą specyfikację znajdziesz
+              <a
+                class="lesson__text-link"
+                href="https://www.w3.org/TR/CSS/"
+                target="_blank"
+                >na stronie W3C.</a
+              >
+            </li>
+          </ul>
+
+          <p class="lesson__text">Składnia CSS to reguły</p>
+
+          <p class="lesson__text">
+            selektor {<br />
+            właściwość: wartość;<br />
+            }
+          </p>
+
+          <p class="lesson__text">
+            Pliki z rozszerzeniem .css -> ale nie jest to jedyna reguła<br />
+            Podpinamy w sekcji head &lt;link href=”style.css” rel=”stylesheet”
+            type=”text/css”&gt; Można stylować w sekcji head &lt;style&gt;
+          </p>
+
+          <p class="lesson__text">
+            #czerwony/zielony/niebieski system szesnastkowy dla kolorów
+          </p>
+          <p class="lesson__text">
+            Fajne kolorki znajdziemy w
+            <a
+              class="lesson__text-link"
+              href="https://coolors.co/"
+              target="_blank"
+              >generator palet.</a
+            >
+          </p>
+        </article>
+      </section>
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part II</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Jak można stylować?</h3>
+          <ul class="lesson__list">
+            <li class="lesson__list-item">W sekcji head &lt;style&gt;</li>
+            <li class="lesson__list-item">
+              Style inline &lt;znacznik
+              style=”color:yellow;”&gt;treść&lt;/znacznik&gt;
+            </li>
+            <li class="lesson__list-item">Przy użyciu !important</li>
+            <li class="lesson__list-item">Po elementach: element</li>
+            <li class="lesson__list-item">
+              Po klasach: .class (. kropka to selektor klasy)
+            </li>
+            <li class="lesson__list-item">
+              Po id: #id (# hasz to selektor id)
+            </li>
+          </ul>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Klasy</h4>
+            <p class="lesson-section__text">
+              html class=”name = css .name<br />
+              html id=”name” =css #name
+            </p>
+            <p class="lesson-section__text">
+              Najlepiej stylować po klasach, bez zagnieżdżeń.<br />
+              Klasy nazywamy po angielsku zgodnie z przeznaczeniem, tworzymy
+              klasy nawet kiedy mamy jeden element danego typu.<br />
+              Nie używamy important i stylów inlineowych.
+            </p>
+
+            <p class="lesson-section__text">
+              Klasa w HTML:<br />
+              &lt;znacznik class=”name”&gt;treść&lt;/znacznik&gt;
+            </p>
+            <p class="lesson-section__text">
+              Klasa w CSS:<br />
+              .name {<br />
+              właściwość: wartość;<br />
+              }
+            </p>
+
+            <p class="lesson-section__text">Nazewnictwo klas:</p>
+            <ul class="lesson-section__list">
+              <li class="lesson-section__list-item">
+                Używać poj. słów z j. angielskiego
+              </li>
+              <li class="lesson-section__list-item">
+                Jeśli już muszą być dwa słowa użyć kebab-case
+              </li>
+              <li class="lesson-section__list-item">
+                Nazywać rzeczy zgodnie z ich funkcją na stronie
+              </li>
+              <li class="lesson-section__list-item">
+                Zaczynać od małej litery, nie zaczynać od cyfr
+              </li>
+              <li class="lesson-section__list-item">
+                Starać się, żeby element miał jedną klasę - nie zwiększać
+                specyficzności bez potrzeby
+              </li>
+            </ul>
+          </section>
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Łączenie selektorów</h4>
+            <p class="lesson-section__text">
+              Na przykład wszystkie linki z nav<br />
+
+              nav a { albo header a {<br />
+              color: blue;<br />
+              }<br />
+              Style zaaplikują się tylko do konkretnego “a” z nav
+            </p>
+
+            <p class="lesson-section__text">
+              a {<br />
+              color: red;<br />
+              }<br />
+              Wszystkie inne “a” na stronie, które nie zawierają się w nav
+              (header)<br />
+              !important - nadpisuje style wszystkich “a”, lepiej nie używać :D
+            </p>
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Specyficzność w CSS</h4>
+            <p class="lesson-section__text">
+              Jak są przejmowane style? Które są ważniejsze? Które mają wyższą
+              specyficzność?
+            </p>
+            <img
+              class="lesson-section__image"
+              src="../assets/img/specyficznosc.JPG"
+              alt="specyficznosc-css"
+            />
+            <p class="lesson-section__text">Jak to liczyć?</p>
+            <img
+              class="lesson-section__image"
+              src="../assets/img/specyficznosc1.JPG"
+              alt="specyficznosc1-css"
+            />
+            <p class="lesson-section__text">
+              Jeżeli specyficzność jest równa - pierwszeństwo ma selektor
+              “bliżej elementu”, bliżej dołu strony.
+            </p>
+
+            <p class="lesson-section__text">
+              Najlepiej dodawać klasy do wszystkich elementów i unikać
+              zagnieżdżeń! Najłatwiej jest wtedy stylować :).<br />
+
+              Style, które ustawiasz na konkretny element mają pierwszeństwo nad
+              tymi, które się dziedziczy
+            </p>
+          </section>
+        </article>
+      </section>
+
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part III</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Życie w pudełku</h3>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Display, wymiary i overflow.</h4>
+            <p class="lesson-section__text">
+              Świat stron internetowych jest płaski - prawie cały, bo poruszamy
+              się w przestrzeni dwuwymiarowej.<br />
+
+              div nie ma znaczenia semantycznego, używamy go gdy chcemy coś
+              opakować, tylko kiedy nie istnieje odpowiedni semantyczny
+              znacznik, używany do stylowania.
+            </p>
+
+            <p class="lesson-section__text">
+              własność display:block, domyślna wartość dla diva, ustawiają się
+              jeden pod drugim, tak samo article, section, main,<br />
+              np. a już nie ale możemy mu dać display:block;
+            </p>
+            <p class="lesson-section__text">
+              display:inline; dodajemy to do diva class .box, elementy ustawiają
+              się obok siebie
+            </p>
+            <p class="lesson-section__text">
+              display: inline-block; taka specjalna xd, wtedy nasz element
+              zachowa się jak przy display: inline; ale nadaje dodatkowe
+              właściwości niedostępne dla własności inlinowych a dostępne dla
+              blockowych np. width i height
+            </p>
+            <p class="lesson-section__text">
+              jak ustawimy szerokość i wysokość i display inline, to ona będzie
+              ignorowana bo się mają wyświetlić liniowo dopóki się mieści, aż
+              się treść skończy.
+            </p>
+
+            <img
+              class="lesson-section__image"
+              src="../assets/img/display.JPG"
+              alt="display CSS"
+            />
+
+            <p class="lesson-section__text">
+              max-width jak będziemy zmniejszać ekran to ten div razem z ekranem
+              będzie się zmniejszał jak by było tylko width to by się pojawił
+              taki scroll na dole przy zmniejszaniu szerokości ekranu
+            </p>
+
+            <p class="lesson-section__text">
+              max-height jak będzie za dużo treści to nam wyleci poza diva
+            </p>
+
+            <p class="lesson-section__text">
+              min-width np 600px, to jak zacznę zmniejszać okno to się pojawi
+              scroll bo nie będzie mniejsze niż 600px szerokości, ale może mieć
+              więcej
+            </p>
+
+            <p class="lesson-section__text">
+              min-height jak dodamy więcej treści to się będzie div poszerzał na
+              długość i żaden tekst nie będzie poza
+            </p>
+
+            <p class="lesson-section__text">głównie stylujemy w poziomie</p>
+
+            <p class="lesson-section__text">
+              overflow: pozwala na odcinanie treści, która nam wystaje, np.
+              overflow: hidden;
+            </p>
+
+            <img
+              class="lesson-section__image"
+              src="../assets/img/overflow.JPG"
+              alt="overflow CSS"
+            />
+
+            <img
+              class="lesson-section__image"
+              src="../assets/img/overflow2.JPG"
+              alt="overflow CSS"
+            />
+
+            <p class="lesson-section__text">
+              overflow: domyślna wartość to visible
+            </p>
+
+            <img
+              class="lesson-section__image"
+              src="../assets/img/overflow3.JPG"
+              alt="overflow CSS"
+            />
+
+            <p class="lesson-section__text">
+              overflow: auto dokłada nam scroll ale nie w przeglądarce ale w
+              konkretnym elemencie
+            </p>
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Jednostki</h4>
+
+            <p class="lesson-section__text">
+              Jak zapisywać wymiary?<br />
+              0 bez jednostki<br />
+              px <br />
+              % liczymy względem rodzica <br />
+              vw viewport width np 50vw % z szerokości całego okna a nie
+              rodzica, jak mamy diva w divie<br />
+              vh viewport height zawsze nam zajmie 100% okna na długość, 100vh
+            </p>
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">
+              Box model (padding, border, margin)
+            </h4>
+
+            <p class="lesson-section__text">
+              Wszystkie elementy na naszej stronie internetowej otoczone są
+              niewidzialnym prostokątem. Większość rzeczy zaczyna się od górnego
+              lewego rogu.
+            </p>
+            <img
+              class="lesson-section__image"
+              src="../assets/img/boxmodel.JPG"
+              alt="boxmodel"
+            />
+            <p class="lesson-section__text">
+              Padding - margines wewnętrzny, odpowiada za to o ile oddalone mają
+              być elementy, które znajdują się w środku elementu, który ma
+              padding, z paddingiem rośnie cały element.
+            </p>
+
+            <img
+              class="lesson-section__image"
+              src="../assets/img/padding.JPG"
+              alt="padding CSS"
+            />
+
+            <p class="lesson-section__text">
+              Border - też jest częścią elementu, też różne krawędzie mogą mieć
+              różne grubości albo style (dashed, dotted, solid) kolory;
+              border-radius np 50% to się robi kółko
+            </p>
+
+            <img
+              class="lesson-section_image"
+              src="../assets/img/border.JPG"
+              alt="border CSS"
+            />
+
+            <p class="lesson-section__text">
+              Margin - poza elementem, o ile możemy się odsunąć od innych
+              elementów, zapisujemy tak samo jak padding, mówi nam o
+              odległościach, które muszą być zachowane od naszego elementu,
+              działa tylko przy wartościach blokowych.
+            </p>
+
+            <p class="lesson-section__text">
+              margin: __px auto;<br />
+              jak mamy inline-block to nic nie zmienia, ale jak już jest block
+              to nam się ładnie wyśrodkuje na stronie, ale musi być podana
+              szerokość elementu, żeby on miał się z czego centrować
+            </p>
+
+            <img
+              class="lesson-section__image"
+              src="../assets/img/margin.JPG"
+              alt="margin CSS"
+            />
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Box-sizing</h4>
+            <img
+              class="lesson-section__image"
+              src="../assets/img/box-sizing.JPG"
+              alt="boz-sizing image"
+            />
+            <p class="lesson-section__text">
+              Domyślną wartością dla naszego box-sizing jest content box,
+              content ustawiamy na 200px to tu się dolicza padding, border więc
+              w rzeczywistości content jest większy niż 200.
+            </p>
+            <p class="lesson-section__text">
+              Border-box pozwala zdefiniować raz całą szerokość naszego elementu
+              i nie martwić się o paddingi. Margin jest liczony osobno bo jest
+              poza elementem.
+            </p>
+
+            <img
+              class="lesson-section__image"
+              src="../assets/img/border-box.JPG"
+              alt="border-box CSS"
+            />
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Position</h4>
+
+            <p class="lesson-section__text">
+              Position - pozwala na pozycjonowanie elementów w naszej
+              przestrzeni, nadpisując ustawienia przeglądarki :D
+            </p>
+
+            <p class="lesson-section__text">
+              position: static; domyśla własność
+            </p>
+
+            <p class="lesson-section__text">
+              position: relative; otwiera nam opcje żeby korzystać z position:
+              absolute; własności: top, right, bottom, left
+            </p>
+
+            <p class="lesson-section__text">
+              działa tak: główny div ma position: relative, a ten w nim ma
+              absolute plus top, right etc. jak z głównego skasujemy relative to
+              ten ze środka jakby wyleci poza diva, a jeżeli dodamy absolute itp
+              do głównego diva to on się będzie ustawiał względem całej strony,
+              np right to na prawo. Względem relative nasze elementy będą
+              pozycjonowane.
+            </p>
+
+            <p class="lesson-section__text">
+              z-index: np. mamy dwa takie same divy z takimi samymi ustawionymi
+              własnościami
+            </p>
+            <img
+              class="lesson-section__image"
+              src="../assets/img/z-index.JPG"
+              alt="z-index CSS"
+            />
+
+            <p class="lesson-section__text">
+              wyżej jest ten, który jest dalej czyli absolute second<br />
+
+              ale można im zdefiniować kolejność za pomocą atrybutu z-index
+              np.1000, ten który ma wyższy x-index jest bliżej ekranu, usera
+            </p>
+
+            <p class="lesson-section__text">
+              position: fixed przykleja się, musi mieć zdefiniowane width
+            </p>
+
+            <p class="lesson-section__text">
+              position: sticky, rodzic nie może mieć overflowa, przykleja się
+              dopiero w momencie tego co zdefiniowane np. top 30px i zostaje w
+              tym divie, ważne tu jest top, trochę podobnie do absolute.
+            </p>
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Float</h4>
+
+            <p class="lesson-section__text">
+              Nie służy do budowania layoutów. Zachowuje się jak inline block.
+              Ma opływać element. Albo treść ma opływać jego. Clear.
+            </p>
+          </section>
+        </article>
+      </section>
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part IV</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Klan</h3>
+
+          <p class="lesson__text">
+            DOM jako rodzina elementów. Pojedynczy element (np. main) z naszego
+            drzewa to węzeł/node. Np. HTML ma 2 dzieci: head i body itp. itd.
+            Rodzic - dziecko
+          </p>
+
+          <p class="lesson__text">
+            Dziedziczenie. Jeżeli definiujemy styl w rodzicu np. kolor to dzieci
+            go przejmą, ale jeśli jakieś dziecko ma ustawiony inny kolor
+            bezpośrednio to wtedy nie, bo on jest ważniejszy niż ‘inherited od
+            rodzica”. Jak wyłączymy np. w DevTools tą deklarację koloru dla
+            elementu to kolor się zmieni na ten dziedziczony. Dzieci dostają
+            atrybuty rodzica jeśli nie były wcześniej jawnie zdefiniowane.
+            <br />
+            Linki działają inaczej. Nie dziedziczą koloru po rodzicu bo są
+            zdefiniowane style przeglądarki, które mają w tym wypadku
+            pierwszeństwo. Dlatego zawsze musimy ustawić kolor linku
+            bezpośrednio.<br />
+            wartość: inherit; Możemy zdefiniować color: inherit; w CSS wtedy
+            kolor linku nawet jeśli będzie ustawiony na inny, będzie
+            dziedziczony a nie brany z przeglądarki. Inherit nadpisuje styl
+            przeglądarki i też ten przypisany. Nie musi to być bezpośrednio od
+            rodzica, może też być od dziadka itp.
+          </p>
+        </article>
+        <article class="lesson">
+          <h3 class="lesson__title">Normalizacja vs reset</h3>
+          <p>Nasza przeglądarka ma domyślne style w user agent stylesheet</p>
+
+          <p class="lesson__text">
+            Reset powinien zresetować wszystkie domyślne style<br />
+
+            Typowy reset<br />
+
+            *{<br />
+            margin: 0;<br />
+            padding: 0;<br />
+            outline: none; jak wciskamy tab i outline jest on to pokazuje
+            dokładnie linki itp, a to jest ważne<br />
+            }<br />
+            ul, ol {<br />
+            list-style: none;<br />
+            }
+          </p>
+
+          <p class="lesson__text">
+            Normalizacja:<br />
+            <a
+              class="lesson__text-link"
+              href="https://necolas.github.io/normalize.css/"
+              >Plik do załączenia</a
+            ><br />
+
+            Każda przeglądarka inaczej sobie zaimplementowała domyślne style, sa
+            drobne różnice.<br />
+            Sprawia, że nasze elementy (nawet jeśli nie będą ostylowane) będą
+            wyglądać jakby były ostylowane przez domyślne style przeglądarki w
+            sensowny sposób. Zbiór reguł. <br />
+            Podpinamy w osobnym pliku stylesheet.<br />
+            najpierw normalize potem nasze style.
+          </p>
+
+          <p class="lesson__text">
+            Miksujemy<br />
+
+            html {<br />
+            box-sizing: border-box;<br />
+            }<br />
+            *, *:before, *:after {<br />
+            box-sizing: inherit;<br />
+            }<br />
+
+            Dopisujemy w css na samej górze.
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Flexbox</h3>
+          <p class="lesson__text">
+            System pozycjonowania i rozmieszczania elementów. <br />
+            display: flex; do kontenera dodajemy<br />
+            Flex pracuje w dwóch osiach: poziomej - wiersz, pionowej - kolumna.
+          </p>
+          <p class="lesson__text">
+            <strong>flex-direction:</strong><br />
+            row --><br />
+            column<br />
+            row-reverse<br />
+            column-reverse
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex-wrap:</strong> zawijanie wiersza, kolumny<br />
+            nowrap tu nam nie pokaże tych 400px dla każdego, tylko ustawi
+            wszystko obok siebie mniejsze<br />
+            wrap np. ustawiamy 400px dla item i one się będą ładnie ustawiać
+            zawijać<br />
+            wrap-reverse
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex-flow:</strong> <br />
+            row nowrap<br />
+            flex-direction flex-wrap
+          </p>
+
+          <p class="lesson__text">
+            <strong>justify-content:</strong> ustawienie elementów wzdłuż osi
+            flex-direction<br />
+            flex-start przyklejony do krawędzi lewej<br />
+            flex-end prawej<br />
+            center<br />
+            space-between liczy wolne przestrzenie, robi się margines między
+            nimi<br />
+            space-around dodaje jeszcze marginesy po bokach i z obu stron na
+            bazie tej wolnej przestrzeni między elementami
+          </p>
+
+          <p class="lesson__text">
+            <strong>align-content:</strong> ustawienie wierszy/kolumn wzdłuż osi
+            przeciwnej do flex-direction (taki justify-content dla drugiej
+            osi)<br />
+            stretch<br />
+            flex-start one się zmniejszają bo nie mają zdefiniowanej
+            wysokości<br />
+            flex-end<br />
+            center<br />
+            space-between- nie ma przestrzeni na górze<br />
+            space-around
+          </p>
+
+          <p class="lesson__text">
+            <strong>align-items:</strong>ustawianie elementów wzdłuż osi
+            przeciwnej do flex-direction, w obrębie pojedynczego wiersza, dla
+            wszystkich elementów, które się znajdują w wierszu, będą tej samej
+            wysokości, jak zmniejszamy ekran to zamiast 3 zrobią się 2 duże a
+            ten jeden wskoczy jako mały<br />
+            stretch<br />
+            flex-start<br />
+            flex-end<br />
+            center<br />
+            baseline - względem dolnej krawędzi pierwszego wiersza z tekstem
+          </p>
+
+          <img
+            class="lesson__image"
+            src="../assets/img/flex-start-endJPG.JPG"
+            alt="flex start and end example"
+          />
+
+          <p class="lesson__text">
+            <strong>align-self:</strong> ustawianie elementu wzdłuż osi
+            przeciwnej do flex-direction np. center <br />
+            to niezależnie gdzie ta 6 się znajdzie będzie wyśrodkowana zawsze w
+            wierszu<br />
+            to jest robione na row i min-height przy column zdefiniowana
+            wysokość, więcej używa się row
+          </p>
+          <img
+            class="lesson__image"
+            src="../assets/img/align-self.JPG"
+            alt="align-self example"
+          />
+
+          <p class="lesson__text">
+            <strong>order:</strong> kolejność elementu <br />
+            0<br />
+            liczba całkowita (-/+)
+          </p>
+
+          <img class="lesson__image" src="../assets/img/order.JPG" alt="order example" />
+          <p class="lesson__text">
+            albo zamiast 1 dać minus 1 i wtedy już tej 2 nie musimy pisać
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex-grow:</strong> współczynnik, odpowiada za to jak bardzo
+            nas element powinien rosnąć w wierszu, jeżeli zostanie jakieś wolne
+            miejsce, przestrzeń, wiersz się cały wypełnia<br />
+            0 czyli elementy nie rosną, bo jest przestrzeń między nimi<br />
+            liczba/proporcja np. 1 , też do pojedynczych elementów dodajemy
+            wtedy dany element jak mu damy 2 to dostanie podwójnie dużo miejsca
+            z tych wolnych przestrzeni
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex-shrink:</strong><br />
+            1<br />
+            liczba/proporcja
+          </p>
+          <p class="lesson__text">
+            np.0 to się kurczy, chowa, jest scroll jak jest 1 domyślne to tak
+            ładnie się wszystkie pokazują przy zmniejszaniu strony, można dać
+            pojedynczemu elementowi np. 2 to on się będzie kurczył bardziej niż
+            reszta
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex-basis:</strong> określenie minimalnej wysokości lub
+            szerokości elementu wewnątrz kontenera flexowego <br />
+            none<br />
+            rozmiar bazowy
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex:</strong> flex-grow flex-shrink flex-basis
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Tła</h3>
+          <p class="lesson__text">
+            background-image: url(‘ścieżka-do-pliku’);<br />
+            url względem pliku z cssami<br />
+            jak body się nie rozciąga na całą wysokość to dodać min-height:
+            100vh;<br />
+            do body też dodajemy class<br />
+          </p>
+          <p class="lesson__text">
+            Background-position<br />
+            ustawia nasze tło, względem elementu, który to tło dostaje, domyślna
+            wartość 0<br />
+            center center to środek zdjęcia, od środka będzie się ustawiać<br />
+            bottom center jak dużo treści to to tło się powtarza od dołu
+          </p>
+          <img
+            class="lesson__image"
+            src="../assets/img/background-position.JPG"
+            alt="background-position"
+          />
+
+          <p class="lesson__text">
+            Background-repeat:<br />
+            repeat - domyślna<br />
+            repeat-x powtarzane tylko po osi x<br />
+            repeat-y<br />
+            no-repeat<br />
+            round otacza i skaluje<br />
+            space<br />
+          </p>
+
+          <p class="lesson__text">
+            background-attachment:<br />
+            scroll domyślnie, idzie razem ze stroną<br />
+            fixed nie rusza się, nieruchome<br />
+            local +overflow scroll, to się tło skroluje razem z treścią, bez
+            local tło zostaje w miejscu a sama treść sie skroluje
+          </p>
+          <img
+            class="lesson__image"
+            src="../assets/img/background-attachment.JPG"
+            alt="background-attachment"
+          />
+
+          <p class="lesson__text">
+            background-origin: w, którym miejscu tło powinno się zaczynać, mało
+            się to wykorzystuje<br />
+            padding-box domyślnie<br />
+            border-box<br />
+            content-box
+          </p>
+
+          <p class="lesson__text">
+            background-clip: w, którym miejscu tło powinno być cięte<br />
+            border-box<br />
+            padding-box<br />
+            content-box tło ograniczone tylko do kontentu
+          </p>
+
+          <p class="lesson__text">
+            background-color:<br />
+
+            rgb(a) tło półprzezroczyste<br />
+            (255,255,255,0.4) np. kontent ma tło białe i dajemy to a w body jest
+            inne tło i wtedy je widać
+          </p>
+
+          <p class="lesson__text">
+            background-size: jak tło ma się zachowywać, jak duże ma być<br />
+            auto domyślne<br />
+            cover zawsze będzie wypełniał naszą stronę, jak zmniejszamy to
+            rośnie, żeby zapełnić sobą całą przestrzeń, jego przyklejenie
+            definiujemy za pomocą background position, chcemy wypełnić całą
+            przestrzeń, jak obrazek jest mniejszy to będzie skalowany w górę<br />
+            contain chcemy, żeby było widoczne całe niezależnie od przeglądarki,
+            chcemy pokazać cały obrazek<br />
+            &lt;width&gt; &lt;height&gt; wartości w pixelach 100px 100px
+          </p>
+
+          <p class="lesson__text">
+            Gradienty:
+            <a
+              class="lesson__text-link"
+              href="https://cssgradient.io/gradient-backgrounds/"
+              >CSSgradient</a
+            >
+          </p>
+          <p>
+            Jak dodajemy gradient to dobrze dodać background color ten
+            podstawowy kolor i potem background image to już gradient.
+          </p>
+
+          <img
+            class="lesson__image"
+            src="../assets/img/background.JPG"
+            alt="background-values"
+          />
+          <p class="lesson__text">
+            jak poniżej tych zdefiniowanych podamy samo background to ono
+            nadpisze te wcześniejsze
+          </p>
+        </article>
+      </section>
+
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part V</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Grid</h3>
+
+          <p class="lesson__text">
+            Dwuwymiarowy świat stron internetowych.<br />
+
+            Po co grid? Potrzeba stworzenia prostego systemu do budowania
+            layoutów (tabele, floaty, div-oza itp. nie spełniały oczekiwań i
+            były kiepską praktyką).<br />
+            Przyjazny zapis i możliwość łatwej edycji w kontekście
+            responsywności.<br />
+
+            Standard dopasowany do aktualnego stanu stron internetowych.
+          </p>
+
+          <img class="lesson__image" src="../assets/img/grid.JPG" alt="grid example" />
+
+          <p class="lesson__text">
+            Numeracja zaczyna się od 1. Siatka, którą możemy podzielić na
+            elementy. Prostokąty.
+          </p>
+
+          <p class="lesson__text">
+            Kontener: display: grid z kilkoma elementami w środku np.6. Elementy
+            ustawiają się jeden pod drugim. Jakby było flex to by się ustawiły
+            obok blisko siebie.
+          </p>
+
+          <p class="lesson__text">
+            Linie w devtoolsach, inspektor gridowy, identyfikacja kolumn i
+            wierszy.
+          </p>
+
+          <p class="lesson__text">
+            Grid działa bezpośrednio na swoje dzieci czyli jak w dziecku dodamy
+            wnuka to one będą się jakby trzymać razem jako jeden element, nie
+            przeskoczy nam nigdzie. Wszystkie własności odnoszą się do jego
+            bezpośrednich dzieci.
+          </p>
+
+          <p class="lesson__text">
+            Własność gridowa:<br />
+            grid-template-columns:&lt;warto&sacute;ci wypisujemy po spacji&gt;
+            grid-template-columns: 100px 300px;<br />
+            3 kolumny będą 100px(liczy 1,3,5) i 3 obok po 300px(2,4,6), możemy
+            dać więcej kolumn<br />
+            Jak jedno jest wyższe to cały wiersz się rozszerza do wysokości
+            najwyższego elementu.
+          </p>
+
+          <p class="lesson__text">
+            Można używać innych wartości niż px, vw
+          </p>
+
+          <p class="lesson__text">
+            grid-template-rows: 100px 200px, definiuje liczbę wierszy i jak mają
+            się zachowywać. Jak np. kontent jest dłuższy niż te 100px to nam nie
+            rozepcha tylko zostawi 100px. Jak się okaże, że się zrobiły 3
+            wiersze a nie mamy trzeciego zdefiniowanego to będzie przyjmował
+            automatyczną wartość.<br />
+
+            W wierszach rzadko definiujemy wysokość, generalnie.
+          </p>
+
+          <p class="lesson__text">
+            Jednostka: fr taki ułamek, sumujemy ilość podanych frów i
+            poszczególne wartości dzielimy przez sumę np. 1fr 1fr 2fr to ¼ ¼
+            2/4<br />
+
+            można mixować<br />
+            columns: 200px 1fr - fr zawsze liczy wartość na bazie wolnej
+            powierzchni, szerokości która została, ta wolna po odjęciu 200px,
+            niezdefiniowana przez żadne jednostki
+          </p>
+
+          <p class="lesson__text">
+            repeat(ileRazy, wartość); funkcja cssowa<br />
+
+            grid-template-columns: repeat(4, 1fr); albo 4, 200px, <br />
+
+            grid-template-columns: repeat(4, 200px) 1fr(kolejna kolumna-z wolnej
+            przestrzeni to co zostanie)
+          </p>
+          ;
+
+          <p class="lesson__text">
+            column-gap: 16px; tworzy przerwy między komórkami ale nie wypływa na
+            zewnątrz, rozmiar odstępu row-gap: 16px;
+          </p>
+
+          <p class="lesson__text">
+            minmax(minWartość, maxWartość);<br />
+            grid-template-columns: 1fr minmax(200px, 1fr); jak dochodzi do 200
+            to już się nie zmniejsza, jak będą px px to się będzie kurczyć
+            ostanie w stosunku do innych.
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Grid - podstawowy layout</h3>
+
+          <img class="lesson__image" src="../assets/img/grid1.JPG" alt="grid example" />
+          <img class="lesson__image" src="../assets/img/grid2.JPG" alt="grid example" />
+          <img class="lesson__image" src="../assets/img/grid3.JPG" alt="grid example" />
+
+          <p class="lesson__text">
+            za pomocą kropki dodajemy pusty element, i to nam się tak brzydko
+            zrobi bo nie mamy zdefiniowanego column z 3 wartościami, więc musimy
+            dodać wartość i wszystko wróci do normy<br />
+            możemy do grida wrzucać niezdefiniowane obszary musimy pamiętać, że
+            przy definicji szerokości kolumny trzeba podać dla pustego, żeby
+            liczba kolumn zgadzała się z liczbą wartości dla kolumn
+          </p>
+
+          <p class="lesson__text">
+            gdzie się kończy gdzie zaczyna, na której linii
+          </p>
+
+          <img class="lesson__image" src="../assets/img/grid4.JPG" alt="grid example" />
+
+          <img class="lesson__image" src="../assets/img/grid5.JPG" alt="grid example" />
+
+          <p class="lesson__text">
+            Jak w header dopiszemy z-index np 1 to header zasłoni autora
+          </p>
+
+          <img class="lesson__image" src="../assets/img/grid6.JPG" alt="grid example" />
+
+          <p class="lesson__text">
+            cyfra po spanie mówi nam przez ile kolumn chce rysować nasz element,
+            jak damy więcej niż mamy to grid stworzy kolejną kolumnę, ważne żeby
+            ograniczyć się do ilości kolumn, które rzeczywiście mamy
+          </p>
+
+          <p class="lesson__text">
+            grid-area: 1 / 1 / 3 / span 1;<br />
+
+            grid-column: pierwsza / span 3;<br />
+            grid-row: 1 / 3;<br />
+
+            Grid to nie tetris, wszystko zamyka się w regularnych prostokątach.
+            Grid działa tylko na dzieci swoje. Grid nie zastępuje flexboxa, one
+            się super uzupełniają. Grid jest stosowany do budowania całych
+            layoutów, flexboxa używamy do pozycjonowania, centrowania elementów
+            już wewnątrz pojedynczego elementu, konkretnej treści
+          </p>
+          <p>
+            Są 3 artykuły w sekcji i żeby dodać grida to można ominąć sekcję i
+            dodać diva bezpośrednio nad artykułem i objąć je 3, generalnie też
+            nie wszystko trzeba pakować w grida<br />
+
+            W devtollsach jest opcja na 3 kropkach show media queries i pokazuje
+            na jakich szerokościach mamy zdefiniowane style poza tymi default,
+            można też linijki dodać.
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Media queries & mobile first</h3>
+
+          <p class="lesson__text">
+            CSS media queries - zapytania o media<br />
+            Strony są skrojone na wymiar, jedna strona z tym samym kodem HTML
+            może wyświetlać się na komputerze, tablecie, telefonie, tylko style
+            zmieniamy.
+          </p>
+
+          <p class="lesson__text">
+            RWD - responsive web design
+          </p>
+
+          <p class="lesson__text">
+            @media screen, print, all … media type<br />
+
+            min-width, max-width, color, aspect-ratio, orientation ...media
+            feature<br />
+
+            możemy łączyć za pomocą and / not / , <br />
+            pewnego rodzaju wyrażenie logiczne. <br />
+
+            @media query musi być na dole strony bo jak przeniesiemy na górę to
+            zadziała specyficzność, definiujemy po zdefiniowaniu elementu
+          </p>
+
+          <p class="lesson__text">
+            @media screen and (max-width: 600px) {<br />
+            body {<br />
+            background: hotpink;<br />
+            }<br />
+
+            .footer {<br />
+            background: blueviolet;<br />
+            }<br />
+            }
+          </p>
+
+          <p class="lesson__text">
+            @media not screen and (min-width: 600px), not zaneguje wyrażenie,
+            jeżeli któryś z tych dwóch będzie fałszem no to będzie prawda
+          </p>
+
+          <p>
+            @media screen, (max-width: 600px), "," działa jak or czyli zawsze
+            teraz będą te style media<br />
+
+            mobile-first takie podejście, stylujemy stronę najpierw na
+            urządzenia mobilne a potem za pomocą media-queries ustalamy jak
+            elementy powinny wyglądać na rozdzielczościach większych,
+          </p>
+
+          <img
+            class="lesson__image"
+            src="../assets/img/media.JPG"
+            alt="media quieres example"
+          />
+
+          <p class="lesson__text">
+            przenosimy to z maina do @media, i nam się pokazuje teraz to jako na
+            telefonie, jak dojade do 600 to się zmienia<br />
+
+            320px mobilka, 768 tablet, 1024, 1440, tutaj podajemy min
+          </p>
+
+          <img
+            class="lesson__image"
+            src="../assets/img/media1.JPG"
+            alt="media queries example"
+          />
+
+          <p class="lesson__text">
+            jak zdefiniujemy coś na 768 to nie zdefiniujemy tego a nie
+            zdefiniujemy tego na 1024 to będą te same style co na 768<br />
+
+            chyba, że zrobimy tak: @media screen and (min-width: 768px) and
+            (max-width: 1023px) <br />
+
+            podamy max-width graniczna wartość 1023px; to ponadto nie będą już
+            te style stosowane, np.nie będzie grida
+          </p>
+
+          <p class="lesson__text">
+            breakpoint punkt, w którym następuje łamanie strony, szerokości na
+            których następuje zmiana
+          </p>
+
+          <p class="lesson__text">
+            responsywność w mobile first polega na tym, że najpierw definiujemy
+            style, które obowiązują na całej stronie łącznie z wersją mobilną a
+            potem dodajemy kolejne breakpointy, żeby lepiej dopasować je do
+            większych ekranów. <br />
+
+            przepisujemy tylko te własności, które chcemy zmienić, nie trzeba
+            definiować wszytskiego na nowo, można chować elementy itp.
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Hamburger menu</h3>
+          <p class="lesson__text">
+            Przepis na hamburger menu:<br />
+            Nawigacja<br />
+            Style do nawigacji na mobile<br />
+            Style do nawigacji na desktop<br />
+            Przycisk do pokazywania/ukrywania (zmiana klasy)<br />
+            Kod js do podpięcia się pod przycisk<br />
+            Kod js do zmiany klasy
+          </p>
+
+          <p class="lesson__text">
+            manipulacja klasami:<br />
+
+            element.classList add, remove, toggle, contains (tutaj podajemy samą
+            nazwę klasy bez kropki) classList to obiekt?
+          </p>
+
+          <img
+            class="lesson__image"
+            src="../assets/img/hamburger.JPG"
+            alt="hamburger menu"
+          />
+
+          <p class="lesson__text">
+            i ja np. mogę sobie ostylować tą klasę i wtedy się zmieni po
+            kliknięciu
+          </p>
+
+          <img
+            class="lesson__image"
+            src="../assets/img/hamburger1.JPG"
+            alt="hamburger menu"
+          />
+
+          <p class="lesson__text">
+            żeby zdjęcie nie wystawało to display: block, max-width: 100%,
+          </p>
+
+          <p class="lesson__text">
+            jak robimy header fixed i ustawiamy min height to dobrze dla tego co
+            pod np. main ustawic margin żeby nie wchodziło na to
+          </p>
+        </article>
+      </section>
+
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part VI</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Pseudoelementy & Pseudoselektory</h3>
+
+          <p class="lesson__text">
+            pseudoelement pozwala na to, że css może tworzyć treść za pomocą
+            własności content: “” element::before <br />
+            treść elementu<br />
+            element::after<br />
+          </p>
+
+          <p class="lesson__text">
+            wybieramy jakiś nagłówek nazwa::before i styluje content: “hello”;
+            możemy za pomocą tego uzupełnić treść np przed albo po nagłówku, ta
+            treść nie jest jest częścią DOMU, tej właściwej treści, to jest
+            psuedoelement, możemy np zmienić mu display block, width, height
+            background, często są to rzeczy dekoracyjne np display inline block
+            width height backgrund border-radius 50% i jest kropka content
+            zostaje “”
+          </p>
+
+          <p class="lesson__text">
+            można też używać : pojedynczego ale bardziej poprawnie jest ::
+          </p>
+
+          <a
+            class="lesson__link"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+            >Pseudoklasy</a
+          >
+
+          <p class="lesson__text">
+            pseudoklasy : pojedynczy dwukropek, <br />
+            selektor: hover, visited, focus<br />
+            modyfikator elementu, którego działanie wynika z innego działania,
+            często się używa na linkach, focus np do inputów
+          </p>
+
+          <p class="lesson__text">
+            first-child, last-child …<br />
+            jeśli ten element jest trzecim dzieckiem jakiegoś rodzica to wtedy
+            te style się wykonają na nim właśnie, wszystkie artykuły nazywają
+            się week summary, dodam week-summary:first-child: to się ostyluje
+            tylko ten, który jest 1 dzieckiem grida w którym one się znajdują
+          </p>
+
+          <p class="lesson__text">
+            selektor:not(selektor) zaprzeczenie <br />
+            .week-summary:not(.week-summary--special) <br />
+            background: hotpink;<br />
+            wszystkie inne oprócz tego special się ostylują
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">SASS/SCSS</h3>
+
+          <p class="lesson__text">
+            Problemy ze stylowaniem:<br />
+            -porozrzucane klasy (bałagan w plikach)<br />
+            -@media oddzielone od elementu (konieczność ponownego
+            definiowania)<br />
+            -kiepska czytelność plików (szczególnie przy zagnieżdżeniach)<br />
+            -brak możliwości definiowania funkcji do robienia podobnych rzeczy
+          </p>
+
+          <p class="lesson__text">
+            Na ratunek preprocesory, sass to preprocesor css, zamienia nam swoją
+            składnię jakąś na takiego css-a który jest rozumiany przez
+            przeglądarkę
+          </p>
+          <a class="lesson__link" href="https://sass-lang.com/documentation"
+            >SASS dokumentacja</a
+          >
+
+          <p class="lesson__text">
+            SASS potrzebuje narzędzia do działania zainstalujemy go potem teraz
+            się pobawimy za pomocą narzędzia w przeglądarce
+          </p>
+
+          <p class="lesson__text">
+            SASS vs SCSS<br />
+            sass to narzędzie, ma swoja składnię ale też składnię scss, to są
+            dwie różne składnie, Maciek używa SCSSa bo jest prostsza i bardziej
+            czytelna <br />
+            sassowa nie używa np. nawiasów klamrowych taki jest pythonow xd
+          </p>
+
+          <p class="lesson__text">
+            dwa rodzaje plików:<br />
+            .scss dla programisty -->sass nad strzałką → .css dla przeglądarki
+            my piszemy w scss a narzędzie sass zamienia te pliki na pliki css
+            które przeglądarka rozumie
+          </p>
+
+          <a class="lesson__link" href="https://www.sassmeister.com/"
+            >SASS tool</a
+          >
+
+          <p class="lesson__text">co nam daje sass? np $zmienna</p>
+
+          <p class="lesson__text">
+            @mixin @include<br />
+            przyjmują kilka własności
+          </p>
+          <img class="lesson__image" src="../assets/img/sass.JPG" alt="mixin example" />
+
+          <img class="lesson__image" src="../assets/img/sass1.JPG" alt="mixin example" />
+
+          <p class="lesson__text">
+            możemy też zrobić mixin który będzie przyjmował parametry
+          </p>
+
+          <img class="lesson__image" src="../assets/img/sass2.JPG" alt="mixin example" />
+
+          <p class="lesson__text">@extend</p>
+          <p class="lesson__text">
+            w @include to jest wrzucane do środka a w @extend wyrzuca nam na
+            zewnątrz lepiej mixin i include
+          </p>
+
+          <img class="lesson__image" src="../assets/img/sass3.JPG" alt="mixin example" />
+
+          <p class="lesson__text">& parent selector</p>
+          <p class="lesson__text">mamy to samo w obu stron</p>
+
+          <img class="lesson__image" src="../assets/img/sass4.JPG" alt="parent example" />
+          <p>kod wynikowy jest identyczny ale wszystko zapisaliśmy w sasie</p>
+
+          <img class="lesson__image" src="../assets/img/sass5.JPG" alt="parent example" />
+
+          <p class="lesson__text">
+            Ważne kiedy korzystamy z preprocesorów nie edytujemy plików
+            wynikowych .css
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">node-sass</h3>
+
+          <p class="lesson__text">
+            Połączyć noda z sassem, żby korzystać z niego w wersji
+            składniowej<br />
+
+            npm install node-sass --save-dev
+          </p>
+          <p class="lesson__text">
+            npx node-sass main.scss main.css<br />
+            node-sass src/style.scss dest/style.css<br />
+
+            jak zrobimy teraz jakąś zmianę w main.scss to musimy ją wywołać
+            przez tą samą komendę.
+          </p>
+
+          <p class="lesson__text">
+            Nie zmieniać nic w css bo one tam się nie zapisują, zawsze muszą być
+            robione w scss i zmienione do css.
+          </p>
+
+          <p class="lesson__text">
+            Podpinamy ten plik main.css do HTML, dodajemy też klasę test do
+            naszego pliku index html<br />
+
+            nie chcemy cały czas dodawać komendy do wywoływania, więc npx
+            node-sass -w main.scss main.css i teraz jak dodam zmianę to się
+            pokazuje na bieżąco i w terminalu też pokazuje change<br />
+
+            jak popełnimy błąd to też w terminalu się pokaże<br />
+
+            ctr+c wychodzimy z polecenia
+          </p>
+
+          <p class="lesson__text">
+            dodajemy do jsona <br />
+            "scripts": {<br />
+            "sass": "npx node-sass -w main.scss main.css",<br />
+
+            i teraz uruchamiamy w terminalu npm run sass<br />
+
+            i teraz znowu się powinno monitorować i zmieniać na bieżąco
+          </p>
+
+          <p class="lesson__text">
+            zrobiliśmy folder sass i przenieśliśmy main.scss do folderu, trzeba
+            teraz podmienić w jsonie ścieżkę do pliku sass/
+          </p>
+
+          <p class="lesson__text">
+            po npm run sass sprawdzamy ścieżkę i dostajemy: npx node-sass -w
+            scss/main.scss main.css<br />
+            tak definiujemy skrypty<br />
+
+            tworzymy plik style.scss w katalogu sass, przenosimy tam nasze style
+            z style.css, podmieniamy w json <br />
+            scripts": {<br />
+            "sass": "npx node-sass -w scss/style.scss style.css",<br />
+
+            i komenda npm run sass
+          </p>
+
+          <p class="lesson__text">
+            generalnie pamiętać, żeby zawsze dobra była ścieżka do pliku bo jak
+            widać może mi nie działać jak nie jest xd
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      Anna się uczy 2020.
+      <a class="footer__link" href="#top">Powrót na górę strony</a>
+    </footer>
+    
+  </body>
+</html>
