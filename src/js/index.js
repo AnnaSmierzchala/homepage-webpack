@@ -12,7 +12,13 @@ hamburger.addEventListener('click', () => {
 const button = document.querySelector('.action--js');
 console.log(button);
 
+import moment from 'moment';
 
+
+console.log(moment().startOf('day').fromNow());
+
+const title = document.querySelector('.moment--js');
+title.innerHTML = (moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 const firstName = 'Anna';
 const age = 27;

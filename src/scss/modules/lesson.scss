@@ -5,9 +5,19 @@
     padding: 5px 20px;
     border-radius: 20px;
     box-sizing: border-box;
+    &__div {
+      display: flex;
+      justify-content: space-between;
+    }
     &__title {
       color: #710c0c;
       font-size: 18px;
+    
+     
+    }
+    &__title-moment {
+      background: hotpink;
+      
     }
     &__text-link {
       text-decoration: none;
