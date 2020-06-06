@@ -2,6 +2,7 @@
 
 import '../scss/main.scss';
 
+
 const hamburger = document.querySelector('.hamburger--js');
 
 hamburger.addEventListener('click', () => {
@@ -19,6 +20,11 @@ console.log(moment().startOf('day').fromNow());
 
 const title = document.querySelector('.moment--js');
 title.innerHTML = (moment().format('MMMM Do YYYY, h:mm:ss a'));
+
+setInterval(createContent, 1000);
+createContent();
+
+
 
 const firstName = 'Anna';
 const age = 27;
