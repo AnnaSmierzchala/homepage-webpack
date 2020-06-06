@@ -18,11 +18,12 @@ import moment from 'moment';
 
 console.log(moment().startOf('day').fromNow());
 
+const tikTok = function () {
 const title = document.querySelector('.moment--js');
 title.innerHTML = (moment().format('MMMM Do YYYY, h:mm:ss a'));
-
-setInterval(createContent, 1000);
-createContent();
+}
+setInterval(tikTok, 1000);
+tikTok();
 
 
 
