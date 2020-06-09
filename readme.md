@@ -7,7 +7,7 @@ This is a simple website with notes created for the needs of frontend [training]
 
 ## What you can find here?
 
-This project is kind of the playground to testing what I was learned during the course.
+This project is kind of the playground to testing what I was learning during the course.
 Furthermore there is a lot of information here about html, css, javascript and other useful tools for a modern frontend developer.
 
 
