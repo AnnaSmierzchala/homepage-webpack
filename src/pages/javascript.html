@@ -1233,6 +1233,125 @@
           >
         </article>
       </section>
+
+      <section class="lessons lessons--grid">
+        <h2 class="lessons__title lessons__title--grid">JS part V</h2>
+
+        <article class="lesson lesson--1">
+          <h3 class="lesson__title">JS: Import / Export</h3>
+
+          <p class="lesson__text">
+            Moduły w JS: CommonJS często występuje w skryptach nodowych, node domyślnie z tego korzysta
+ vs ES6 Modules, w przeglądarce można korzystać bez dodatkowych narzędzi.
+
+Żeby móc korzystać z modułów musimy dopisać do script type=”module”
+
+
+
+          </p>
+
+          <p class="lesson__text">
+            export something<br/>
+            
+&lt;script src=&quot;main.js&quot; type=module&gt;&lt;/script&gt;
+
+Chodzi o to, żeby funkcje były w osobnych plikach, bo w głównym chcemy mieć kod, który faktycznie się wykonuje. Definicje funkcji poza main.<br/>
+W tym gdzie definiujemy funkcje jest export, a w głównym robimy import<br/>
+
+export const hello = (name) => {<br/>
+    return `Cześć ${name}`;<br/>
+}<br/>
+export const crazy = "Anitka";
+
+          </p>
+<p class="lesson__text">
+  import {hello, crazy} from "./hello.js";<br/>
+ 
+console.log(hello('Ania'));<br/>
+ 
+console.log(crazy);
+
+</p>
+
+<p class="lesson__text">
+  
+exporty nazwane to były
+ale mamy też export default something - domyślne<br/>
+
+const ania = {<br/>
+    name: 'Anna',<br/>
+    age: 27<br/>
+}<br/>
+export default ania;<br/><br/>
+
+
+import ania from './ania.js';<br/>
+console.log(ania);<br/>
+
+mogę też wpisać inną nazwę niż ania i tak zadziała<br/>
+export default pozwala na dowolne nazywanie rzeczy
+
+</p>
+
+
+<p class="lesson__text">
+  Możemy też dać taką nazwę tego co już mamy zdefiniowane a i tak zadziała <br/>
+  const crazy = {<br/>
+      name: 'Anna',<br/>
+      age: 27<br/>
+  }<br/>
+  export default crazy;
+</p>
+
+<p class="lesson__text">
+  to są właśnie importy modułów ES6<br/>
+  
+  import nazwaRzeczy from ‘nazwa-modułu’ ‘ścieżka/do/pliku’ - default<br/>
+  {pierwszy, drugi} from - ten nie defaultowy<br/>
+  możemy też importować rzeczy z node modules<br/><br/>
+  
+  AS<br/>
+  import {bardzoDługaNazwa as pierwszy} from ..<br/><br/>
+  
+  import {hello as hi, crazy} from "./hello.js";<br/>
+  console.log(hi('Ania'));<br/>
+  .<br/>
+  skraca nam nazwy albo niweluje konflikty z nazwami są własności, które są exportami z pliku hello.js
+</p>
+
+<p class="lesson__text">
+  importowanie z node<br/>
+  
+  npm init -y<br/>
+  npm install moment<br/>
+  dużo plików się pobiera i który importować?<br/>
+  pamiętać node modules nie wolno commitować czyli do .gitignore<br/>
+  
+  Mamy import i export  pozwala na modułowe dzielenie aplikacji dzięki czemu kod staje się czystszy i bardziej czytelny a my możemy składać klocki :D
+</p>
+
+          </article>
+          </section>
+
+          <section class="lessons lessons--grid">
+            <h2 class="lessons__title lessons__title--grid">JS part VI</h2>
+    
+            <article class="lesson lesson--1">
+              <h3 class="lesson__title">JS: Tablice</h3>
+    
+              <p class="lesson__text">
+                Moduły w JS: CommonJS często występuje w skryptach nodowych, node domyślnie z tego korzysta
+     vs ES6 Modules, w przeglądarce można korzystać bez dodatkowych narzędzi.
+    
+    Żeby móc korzystać z modułów musimy dopisać do script type=”module”
+    
+    
+    
+              </p>
+</article>
+</section>    
+
+
     </main>
     <footer class="footer">
       Anna się uczy 2020.

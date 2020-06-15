@@ -1318,6 +1318,105 @@
           </p>
         </article>
       </section>
+
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part VII</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title"> Import/ export - koncept + import w stylach</h3>
+
+          <p class="lesson__text">
+            
+Świat aplikacji i stron stworzony jest z modułów dlatego korzystamy z paczek np. npm.
+Po co moduły?<br/>
+-aplikacje szybko rosną i trudno trzymać wszystko w jednym pliku<br/>
+-chcemy korzystać z wybranych funkcji w różnych plikach<br/>
+-chcemy mieć porządek w projekcie<br/>
+-chcemy korzystać z kodu udostępnianego przez innych developerów (albo udostępniać swój)
+
+          </p>
+
+          <p class="lesson__text">
+            import w (s)css
+  @import “źródło”
+          </p>
+
+<p class="lesson__text">
+  Tworzymy w katalogu sccs katalog modules i tworzymy files dla poszczególnych modułów/bloków, które przenosimy z style.scss
+  i musimy dołączyć:<br/>
+  
+  @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";<br/>
+  @import "modules/heading.scss";<br/>
+  
+  @export raczej tutaj nie ma
+</p>
+
+
+
+          </article>
+
+          <article class="lesson">
+            <h3 class="lesson__title"> CSS: Zmienne</h3>
+  
+            <p class="lesson__text">
+              
+              CSS Custom Properties, do tego używamy psuedoselektor :root
+              --zmienna - definiujemy w :root, wartość - dowolna wartość możliwa w css
+             
+            </p>
+            <p class="lesson__text">
+              :root {<br/>
+                --small-padding: 2px;<br/>
+                --text-color: yellow;<br/>
+                }<br/>
+                jak podamy tutaj niepoprawną wartość np. 10px dla text color, to ta wartość będzie ignorowana
+            </p>
+              
+              <p class="lesson__text">
+                pobranie wartości ze zmiennej za pomocą var(--zmienna)<br/>
+                
+                h1 {<br/>
+                padding: var(--small-padding);<br/>
+                color: var(--text-color);<br/>
+                }
+              </p>
+
+              <p class="lesson__text">
+                działa to podobnie do zmiennych, które mamy w scss, ale te sccowe są wywoływane raz kiedy zmieniamy scss kod na css kod a te zmienne css teraz co mówimy o nich żyją w przeglądarce, dzięki czemu możemy je modyfikować 
+              </p>
+
+<p class="lesson__text">
+  za pomocą js możemy zmienić te wartości, dzięki temu możemy wpływać na wykorzystywanie tego koloru na całej stronie </br>
+  
+  a {<br/>
+  color: var(--text-color);<br/>
+  }
+</p>
+
+<p class="lesson__text">
+  document.documentElement.style.setProperty(‘--zmienna’, ‘wartość’) zmiana wartości za pomocą js, zmieni się kolor jak podamy inną wartość.
+  Głównie to robimy kiedy chcemy zmienić styl strony np. dark-mode, możemy zrobić przełącznik który pozwoli nam na zmianę koloru tekstu albo tła
+</p>
+
+<p class="lesson__text">
+  nasze wartości też możemy nadpisywać za pomocą media queries<br/>
+  @media (min-width: 768px) {<br/>
+  :root {<br/>
+  -small-padding: 1px;<br/>
+  }}
+</p>
+
+<img src="../assets/img/homework.JPG" alt="homework">
+<img src="../assets/img/homework1.JPG" alt="homework">
+
+
+              
+
+
+
+            </article>
+
+          </section>
     </main>
     <footer class="footer">
       Anna się uczy 2020.
