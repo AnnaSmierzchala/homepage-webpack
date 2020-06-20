@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
   </head>
 
   <body>
@@ -31,6 +30,9 @@
         >
         <a class="navigation__link" href="terminal.html" target="_blank"
           >Terminal</a
+        >
+        <a class="navigation__link" href="webpack.html" target="_blank"
+          >Webpack</a
         >
         <a class="navigation__link" href="spis-tresci.html" target="_blank"
           >Spis lekcji</a
@@ -660,7 +662,11 @@
             liczba całkowita (-/+)
           </p>
 
-          <img class="lesson__image" src="../assets/img/order.JPG" alt="order example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/order.JPG"
+            alt="order example"
+          />
           <p class="lesson__text">
             albo zamiast 1 dać minus 1 i wtedy już tej 2 nie musimy pisać
           </p>
@@ -822,7 +828,11 @@
             Standard dopasowany do aktualnego stanu stron internetowych.
           </p>
 
-          <img class="lesson__image" src="../assets/img/grid.JPG" alt="grid example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/grid.JPG"
+            alt="grid example"
+          />
 
           <p class="lesson__text">
             Numeracja zaczyna się od 1. Siatka, którą możemy podzielić na
@@ -908,9 +918,21 @@
         <article class="lesson">
           <h3 class="lesson__title">Grid - podstawowy layout</h3>
 
-          <img class="lesson__image" src="../assets/img/grid1.JPG" alt="grid example" />
-          <img class="lesson__image" src="../assets/img/grid2.JPG" alt="grid example" />
-          <img class="lesson__image" src="../assets/img/grid3.JPG" alt="grid example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/grid1.JPG"
+            alt="grid example"
+          />
+          <img
+            class="lesson__image"
+            src="../assets/img/grid2.JPG"
+            alt="grid example"
+          />
+          <img
+            class="lesson__image"
+            src="../assets/img/grid3.JPG"
+            alt="grid example"
+          />
 
           <p class="lesson__text">
             za pomocą kropki dodajemy pusty element, i to nam się tak brzydko
@@ -925,15 +947,27 @@
             gdzie się kończy gdzie zaczyna, na której linii
           </p>
 
-          <img class="lesson__image" src="../assets/img/grid4.JPG" alt="grid example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/grid4.JPG"
+            alt="grid example"
+          />
 
-          <img class="lesson__image" src="../assets/img/grid5.JPG" alt="grid example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/grid5.JPG"
+            alt="grid example"
+          />
 
           <p class="lesson__text">
             Jak w header dopiszemy z-index np 1 to header zasłoni autora
           </p>
 
-          <img class="lesson__image" src="../assets/img/grid6.JPG" alt="grid example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/grid6.JPG"
+            alt="grid example"
+          />
 
           <p class="lesson__text">
             cyfra po spanie mówi nam przez ile kolumn chce rysować nasz element,
@@ -1217,15 +1251,27 @@
             @mixin @include<br />
             przyjmują kilka własności
           </p>
-          <img class="lesson__image" src="../assets/img/sass.JPG" alt="mixin example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/sass.JPG"
+            alt="mixin example"
+          />
 
-          <img class="lesson__image" src="../assets/img/sass1.JPG" alt="mixin example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/sass1.JPG"
+            alt="mixin example"
+          />
 
           <p class="lesson__text">
             możemy też zrobić mixin który będzie przyjmował parametry
           </p>
 
-          <img class="lesson__image" src="../assets/img/sass2.JPG" alt="mixin example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/sass2.JPG"
+            alt="mixin example"
+          />
 
           <p class="lesson__text">@extend</p>
           <p class="lesson__text">
@@ -1233,15 +1279,27 @@
             zewnątrz lepiej mixin i include
           </p>
 
-          <img class="lesson__image" src="../assets/img/sass3.JPG" alt="mixin example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/sass3.JPG"
+            alt="mixin example"
+          />
 
           <p class="lesson__text">& parent selector</p>
           <p class="lesson__text">mamy to samo w obu stron</p>
 
-          <img class="lesson__image" src="../assets/img/sass4.JPG" alt="parent example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/sass4.JPG"
+            alt="parent example"
+          />
           <p>kod wynikowy jest identyczny ale wszystko zapisaliśmy w sasie</p>
 
-          <img class="lesson__image" src="../assets/img/sass5.JPG" alt="parent example" />
+          <img
+            class="lesson__image"
+            src="../assets/img/sass5.JPG"
+            alt="parent example"
+          />
 
           <p class="lesson__text">
             Ważne kiedy korzystamy z preprocesorów nie edytujemy plików
@@ -1323,105 +1381,145 @@
         <h2 class="lessons__title">CSS part VII</h2>
 
         <article class="lesson">
-          <h3 class="lesson__title"> Import/ export - koncept + import w stylach</h3>
+          <h3 class="lesson__title">
+            Import/ export - koncept + import w stylach
+          </h3>
 
           <p class="lesson__text">
+            Świat aplikacji i stron stworzony jest z modułów dlatego korzystamy
+            z paczek np. npm. Po co moduły?<br />
+            -aplikacje szybko rosną i trudno trzymać wszystko w jednym pliku<br />
+            -chcemy korzystać z wybranych funkcji w różnych plikach<br />
+            -chcemy mieć porządek w projekcie<br />
+            -chcemy korzystać z kodu udostępnianego przez innych developerów
+            (albo udostępniać swój)
+          </p>
+
+          <p class="lesson__text">
+            import w (s)css @import “źródło”
+          </p>
+
+          <p class="lesson__text">
+            Tworzymy w katalogu sccs katalog modules i tworzymy files dla
+            poszczególnych modułów/bloków, które przenosimy z style.scss i
+            musimy dołączyć:<br />
+
+            @import
+            "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";<br />
+            @import "modules/heading.scss";<br />
+
+            @export raczej tutaj nie ma
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">CSS: Zmienne</h3>
+
+          <p class="lesson__text">
+            CSS Custom Properties, do tego używamy psuedoselektor :root
+            --zmienna - definiujemy w :root, wartość - dowolna wartość możliwa w
+            css
+          </p>
+          <p class="lesson__text">
+            :root {<br />
+            --small-padding: 2px;<br />
+            --text-color: yellow;<br />
+            }<br />
+            jak podamy tutaj niepoprawną wartość np. 10px dla text color, to ta
+            wartość będzie ignorowana
+          </p>
+
+          <p class="lesson__text">
+            pobranie wartości ze zmiennej za pomocą var(--zmienna)<br />
+
+            h1 {<br />
+            padding: var(--small-padding);<br />
+            color: var(--text-color);<br />
+            }
+          </p>
+
+          <p class="lesson__text">
+            działa to podobnie do zmiennych, które mamy w scss, ale te sccowe są
+            wywoływane raz kiedy zmieniamy scss kod na css kod a te zmienne css
+            teraz co mówimy o nich żyją w przeglądarce, dzięki czemu możemy je
+            modyfikować
+          </p>
+
+          <p class="lesson__text">
+            za pomocą js możemy zmienić te wartości, dzięki temu możemy wpływać
+            na wykorzystywanie tego koloru na całej stronie <br />
+
+            a {<br />
+            color: var(--text-color);<br />
+            }
+          </p>
+
+          <p class="lesson__text">
+            document.documentElement.style.setProperty(‘--zmienna’, ‘wartość’)
+            zmiana wartości za pomocą js, zmieni się kolor jak podamy inną
+            wartość. Głównie to robimy kiedy chcemy zmienić styl strony np.
+            dark-mode, możemy zrobić przełącznik który pozwoli nam na zmianę
+            koloru tekstu albo tła
+          </p>
+
+          <p class="lesson__text">
+            nasze wartości też możemy nadpisywać za pomocą media queries<br />
+            @media (min-width: 768px) {<br />
+            :root {<br />
+            -small-padding: 1px;<br />
+            }}
+          </p>
+
+          <img src="../assets/img/homework.JPG" alt="homework" />
+          <img src="../assets/img/homework1.JPG" alt="homework" />
+        </article>
+      </section>
+
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part VIII</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">
+            CSS: Prefixy
+          </h3>
+
+          <p class="lesson__text"> -moz- -ms- -webkit- itp
+            generalnie chodzi o to, że każda przeglądarka implementuje różne feature’y w różnym czasie, często każda po swojemu, a prefixy pozwalają nam uruchomić je w różnych przeglądarkach
             
-Świat aplikacji i stron stworzony jest z modułów dlatego korzystamy z paczek np. npm.
-Po co moduły?<br/>
--aplikacje szybko rosną i trudno trzymać wszystko w jednym pliku<br/>
--chcemy korzystać z wybranych funkcji w różnych plikach<br/>
--chcemy mieć porządek w projekcie<br/>
--chcemy korzystać z kodu udostępnianego przez innych developerów (albo udostępniać swój)
-
-          </p>
-
-          <p class="lesson__text">
-            import w (s)css
-  @import “źródło”
-          </p>
-
-<p class="lesson__text">
-  Tworzymy w katalogu sccs katalog modules i tworzymy files dla poszczególnych modułów/bloków, które przenosimy z style.scss
-  i musimy dołączyć:<br/>
-  
-  @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";<br/>
-  @import "modules/heading.scss";<br/>
-  
-  @export raczej tutaj nie ma
-</p>
-
-
-
-          </article>
-
-          <article class="lesson">
-            <h3 class="lesson__title"> CSS: Zmienne</h3>
-  
-            <p class="lesson__text">
-              
-              CSS Custom Properties, do tego używamy psuedoselektor :root
-              --zmienna - definiujemy w :root, wartość - dowolna wartość możliwa w css
-             
             </p>
-            <p class="lesson__text">
-              :root {<br/>
-                --small-padding: 2px;<br/>
-                --text-color: yellow;<br/>
-                }<br/>
-                jak podamy tutaj niepoprawną wartość np. 10px dla text color, to ta wartość będzie ignorowana
-            </p>
-              
-              <p class="lesson__text">
-                pobranie wartości ze zmiennej za pomocą var(--zmienna)<br/>
-                
-                h1 {<br/>
-                padding: var(--small-padding);<br/>
-                color: var(--text-color);<br/>
-                }
+
+            <img class="lesson__image" src="../assets/img/moz.JPG" alt="przykłady prefixów">
+            <p class="lesson__text">żeby flexbox działał na wszystkich przeglądarkach to trzeba dodać te prefixy i wtedy przeglądarka wybiera tą wersję flexboxa którą wspiera <br/>
+
+              skąd mam wiedzieć, że coś mam gdzieś dopisać? najlepiej sprawdzić na canIuse, sprawdzamy, czy przeglądarki wspierają.  
+               
               </p>
 
               <p class="lesson__text">
-                działa to podobnie do zmiennych, które mamy w scss, ale te sccowe są wywoływane raz kiedy zmieniamy scss kod na css kod a te zmienne css teraz co mówimy o nich żyją w przeglądarce, dzięki czemu możemy je modyfikować 
-              </p>
-
-<p class="lesson__text">
-  za pomocą js możemy zmienić te wartości, dzięki temu możemy wpływać na wykorzystywanie tego koloru na całej stronie </br>
-  
-  a {<br/>
-  color: var(--text-color);<br/>
-  }
-</p>
-
-<p class="lesson__text">
-  document.documentElement.style.setProperty(‘--zmienna’, ‘wartość’) zmiana wartości za pomocą js, zmieni się kolor jak podamy inną wartość.
-  Głównie to robimy kiedy chcemy zmienić styl strony np. dark-mode, możemy zrobić przełącznik który pozwoli nam na zmianę koloru tekstu albo tła
-</p>
-
-<p class="lesson__text">
-  nasze wartości też możemy nadpisywać za pomocą media queries<br/>
-  @media (min-width: 768px) {<br/>
-  :root {<br/>
-  -small-padding: 1px;<br/>
-  }}
-</p>
-
-<img src="../assets/img/homework.JPG" alt="homework">
-<img src="../assets/img/homework1.JPG" alt="homework">
-
-
-              
-
-
-
+                https://caniuse.com/#search=flex<br/>
+                ttps://autoprefixer.github.io/ <br/>
+                nasz szkoleniowy starterkit już go ma, automatycznie dopisuje nam prefixy
+                </p>
             </article>
 
-          </section>
+            <article class="lesson">
+              <h3 class="lesson__title">
+                Google fonts
+              </h3>
+              <p class="lesson__text">
+                <a herf="https://fonts.google.com">Google fonts</a>
+                importujemy czcionki z zewnętrznego serwera, wybierać language latin extended, zażółć gęślą jaźń. Ta dopiska końcu sans serif, te fonty ważą więc lepiej nie dołączać więcej niż 2 fonty<br/>
+                
+                @font-face pozwala na dołączenie plików z fontami, nie jest to super popularne
+                ?
+                </p>
+                </article>
+
+            </section>
     </main>
     <footer class="footer">
       Anna się uczy 2020.
       <a class="footer__link" href="#top">Powrót na górę strony</a>
     </footer>
-    
   </body>
 </html>

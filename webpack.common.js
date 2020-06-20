@@ -87,6 +87,12 @@ module.exports = {
       filename: "spis-tresci.html",
     }),
     new HtmlWebpackPlugin({
+      template: "./src/pages/webpack.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "webpack.html",
+    }),
+    new HtmlWebpackPlugin({
       template: "./src/pages/terminal.html",
       inject: true,
       chunks: ["index"],

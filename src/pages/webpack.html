@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
   </head>
 
   <body>
@@ -32,9 +31,14 @@
         <a class="navigation__link" href="terminal.html" target="_blank"
           >Terminal</a
         >
+        <a class="navigation__link" href="webpack.html" target="_blank"
+          >Webpack</a
+        >
         <a class="navigation__link" href="spis-tresci.html" target="_blank"
           >Spis lekcji</a
         >
+        
+
       </nav>
     </header>
 
@@ -47,217 +51,254 @@
           <h3 class="lesson__title">Webpack wstęp</h3>
 
           <p class="lesson__text">
-            Webpack - ogarniacz, podstawowe narzędzie frontendowca, developerskie, może automatyzować procesy, ułatwia development,używają go wiodące frameworki i biblioteki, warto znać podstawy.
-
- Aktualnie działa w najnowszej wersji bez konfiguracji nawet.
-
-Muszę umieć uruchomić.
-
+            Webpack - ogarniacz, podstawowe narzędzie frontendowca,
+            developerskie, może automatyzować procesy, ułatwia
+            development,używają go wiodące frameworki i biblioteki, warto znać
+            podstawy. Aktualnie działa w najnowszej wersji bez konfiguracji
+            nawet. Muszę umieć uruchomić.
           </p>
 
-<p class="lesson__text">
-    Bundle (pakować) your scripts, images, styles, assets. Na bazie tego co mu podamy oddaje gotowe pliki, które można wrzucić na serwer, przyjazne dla przeglądarki, które przeglądarka rozumie. Pakuje nam wszystko w jeden plik, te wszystkie moduły potem kompresuje. 
-    Poczytaj dokumentację webpacka. Nie muszę jeszcze umieć napisać konfiguracji webpacka.
-</p>
+          <p class="lesson__text">
+            Bundle (pakować) your scripts, images, styles, assets. Na bazie tego
+            co mu podamy oddaje gotowe pliki, które można wrzucić na serwer,
+            przyjazne dla przeglądarki, które przeglądarka rozumie. Pakuje nam
+            wszystko w jeden plik, te wszystkie moduły potem kompresuje.
+            Poczytaj dokumentację webpacka. Nie muszę jeszcze umieć napisać
+            konfiguracji webpacka.
+          </p>
 
-<p class="lesson__text">
-    Z czego składa się konfiguracja webpacka?<br/>
-    Możemy go zainstalować za pomocą narzędzi npmowych. Kopiujemy komendy.<br/>
-    http://webpack.js.org
-    npx webpack w terminalu, błąd nie może znaleźć plików, nie potrzebuje pliku konfiguracyjnego. Ma swoje domyślne rzeczy:
-    plik wejściowy entry domyślnie: ./src/index.js<br/>
-    w codzie tworzymy folder src a w nim plik index.js<br/>
-    piszemy prosty skrypt 
-    i dostajemy w terminalu, że w konfiguracji nie ma jeszcze trybu ale już na zwraca plik main.js
-    W sensie tworzy się katalog dist a w tym katalogu main.js. i tam ten kod jest dla nas niezrozumiały ale dla przeglądarki tak. I on już jest zminifikowany czy coś. 
-</p>
+          <p class="lesson__text">
+            Z czego składa się konfiguracja webpacka?<br />
+            Możemy go zainstalować za pomocą narzędzi npmowych. Kopiujemy
+            komendy.<br />
+            http://webpack.js.org npx webpack w terminalu, błąd nie może znaleźć
+            plików, nie potrzebuje pliku konfiguracyjnego. Ma swoje domyślne
+            rzeczy: plik wejściowy entry domyślnie: ./src/index.js<br />
+            w codzie tworzymy folder src a w nim plik index.js<br />
+            piszemy prosty skrypt i dostajemy w terminalu, że w konfiguracji nie
+            ma jeszcze trybu ale już na zwraca plik main.js W sensie tworzy się
+            katalog dist a w tym katalogu main.js. i tam ten kod jest dla nas
+            niezrozumiały ale dla przeglądarki tak. I on już jest zminifikowany
+            czy coś.
+          </p>
 
+          <p class="lesson__text">
+            Zakładamy index.html i podpinamy tego main.js.<br />
+            Output domyślnie: ./dist/main.js plik wyjściowy, dista nie
+            edytujemy.
+          </p>
 
-<p class="lesson__text">
-    Zakładamy index.html i podpinamy tego main.js.<br/>
-    Output domyślnie: ./dist/main.js plik wyjściowy, dista nie edytujemy. 
-</p>
+          <p class="lesson__text">
+            Importujemy moment. <br />
+            W index.js import moment from ‘moment’;<br />
+            console.log(moment);<br />
 
-<p class="lesson__text">
-    Importujemy moment. <br/>
-    W index.js import moment from ‘moment’;<br/>
-    console.log(moment);<br/>
-    
-    w terminalu wywołujemy webpacka, npx webpack, żeby te zmiany zostały przetrawione. 
-</p>
+            w terminalu wywołujemy webpacka, npx webpack, żeby te zmiany zostały
+            przetrawione.
+          </p>
 
-<p class="lesson__text">
-    dokumentacja moment.js<br/>
-    zwraca datę w danym formacie<br/>
-    ten moment działa dzięki webpackowi, pozwala korzystać z zewnętrznych paczek, sam wszystko ładnie łączy, dorzuca itp.<br/>
-    
-    Możemy robić operacje na plikach jsowych, które są domyślne. <br/>
-    Ale webpack posiada też coś co nazywa się loaderami - dodatkowe opcje webpackowe pozwalające na operacje na plikach innych niż JS, na wczytywanie plików innych niż JS, jeżeli chcemy ogarnąć style albo sprawdzić ścieżki do obrazków i je skompresować.
-</p>
+          <p class="lesson__text">
+            dokumentacja moment.js<br />
+            zwraca datę w danym formacie<br />
+            ten moment działa dzięki webpackowi, pozwala korzystać z
+            zewnętrznych paczek, sam wszystko ładnie łączy, dorzuca itp.<br />
 
-<p class="lesson__text">
-    Przykładowy plik konfiguracyjny z loader, sekcja rules,  to są wyrażenia regularne, loadery działają na konkretne pliki do js, obrazków czy htmla.
-    </p>
+            Możemy robić operacje na plikach jsowych, które są domyślne. <br />
+            Ale webpack posiada też coś co nazywa się loaderami - dodatkowe
+            opcje webpackowe pozwalające na operacje na plikach innych niż JS,
+            na wczytywanie plików innych niż JS, jeżeli chcemy ogarnąć style
+            albo sprawdzić ścieżki do obrazków i je skompresować.
+          </p>
 
-    <img class="lesson__image" src="../assets/img/loader.JPG" alt="loader example">
+          <p class="lesson__text">
+            Przykładowy plik konfiguracyjny z loader, sekcja rules, to są
+            wyrażenia regularne, loadery działają na konkretne pliki do js,
+            obrazków czy htmla.
+          </p>
 
-    <p class="lesson__text">
-        Plugin - pozwala na wykonywanie różnych operacji, raczej nie wczytywanie czy modyfikowanie raczej np kopiowanie plików, pluginy też są paczkami z npm.
-    Kopiujemy pluginy, pozwalają nam na tworzenie podstron, kopiowanie wszystkiego z katalogu public do katalogu dist.
-    </p>
+          <img
+            class="lesson__image"
+            src="../assets/img/loader.JPG"
+            alt="loader example"
+          />
 
-<p class="lesson__text">
-    Mode - tryby: development - developerski, coś co uruchamiamy u siebie na kompie, praca nad stroną aplikacją, production - produkcyjny - oddane po testach do działania, to co leci na serwer, to co ludzie widzą.  
-</p>
+          <p class="lesson__text">
+            Plugin - pozwala na wykonywanie różnych operacji, raczej nie
+            wczytywanie czy modyfikowanie raczej np kopiowanie plików, pluginy
+            też są paczkami z npm. Kopiujemy pluginy, pozwalają nam na tworzenie
+            podstron, kopiowanie wszystkiego z katalogu public do katalogu dist.
+          </p>
 
-<p class="lesson__text">
-    Developerski dla webpacka <br/>
-    npx webpack --mode development<br/>
-    już nie ma błędu, że nie podaliśmy trybu
-</p>
+          <p class="lesson__text">
+            Mode - tryby: development - developerski, coś co uruchamiamy u
+            siebie na kompie, praca nad stroną aplikacją, production -
+            produkcyjny - oddane po testach do działania, to co leci na serwer,
+            to co ludzie widzą.
+          </p>
 
-<p class="lesson__text">
-    Możliwości webpacka rozszerzamy za pomocą paczek z NPM, np. pluginy instalowane za pomocą npma, dużo jest wtyczek do webpacka, konfiguracji pewnie też. 
-</p>
+          <p class="lesson__text">
+            Developerski dla webpacka <br />
+            npx webpack --mode development<br />
+            już nie ma błędu, że nie podaliśmy trybu
+          </p>
 
-
-
-
-
+          <p class="lesson__text">
+            Możliwości webpacka rozszerzamy za pomocą paczek z NPM, np. pluginy
+            instalowane za pomocą npma, dużo jest wtyczek do webpacka,
+            konfiguracji pewnie też.
+          </p>
         </article>
 
         <article class="lesson">
-            <h3 class="lesson__title">WTF Webpack StarterKit - pierwsze uruchomienie</h3>
-  
-            <p class="lesson__text">
-                Szablon z, którego możemy skorzystać przy tworzeniu projektów.<br/>
-                Webpack starter kit:<br/>
-                -serwer lokalny z autoodświeżaniem, to co robi live server, będziemy uciekać od wtyczek na rzecz webpacka<br/>
-                -wsparcie dla scss i sourcemap<br/>
-                -minifikacja, optymalizacja, usuwanie zbędnych znaków<br/>
-                -babel, pozwala na korzystanie z najnowszych funkcji js które są definiowane w EcmaScript, kod jest zmieniany tak, żeby działał też na starszych przeglądarkach za pomocą zestawu reguł<br/>
-                -publikacja na github pages
-                
-  
-            </p>
+          <h3 class="lesson__title">
+            WTF Webpack StarterKit - pierwsze uruchomienie
+          </h3>
 
-            <p class="lesson__text">
-                zakładamy repozytorium, łączymy z dyskiem git clone https://github.com/maciejkorsan/wtf-webpack-starter/generate
-            </p>
+          <p class="lesson__text">
+            Szablon z, którego możemy skorzystać przy tworzeniu projektów.<br />
+            Webpack starter kit:<br />
+            -serwer lokalny z autoodświeżaniem, to co robi live server, będziemy
+            uciekać od wtyczek na rzecz webpacka<br />
+            -wsparcie dla scss i sourcemap<br />
+            -minifikacja, optymalizacja, usuwanie zbędnych znaków<br />
+            -babel, pozwala na korzystanie z najnowszych funkcji js które są
+            definiowane w EcmaScript, kod jest zmieniany tak, żeby działał też
+            na starszych przeglądarkach za pomocą zestawu reguł<br />
+            -publikacja na github pages
+          </p>
 
-<p class="lesson__text">
-    npm install<br/>
-    npm run start -  uruchamia się webpack dev server, za każdym razem jak zaczynamy pracę<br/>
-    info o adresie naszej strony: http://localhost:8080/
-</p>
+          <p class="lesson__text">
+            zakładamy repozytorium, łączymy z dyskiem git clone
+            https://github.com/maciejkorsan/wtf-webpack-starter/generate
+          </p>
 
-<p class="lesson__text">
-    możemy wyjść z serwera za pomocą ctr c i serwer przestaje działać<br/>
-    src to źródło naszej strony, tutaj pracujemy<br/>
-    ścieżki podajemy względem katalogu src, względem plików źródłowych nie serwerowych<br/>
-    nie ma katalogu dist bo jest uruchomiony w trybie developerskim bez trybu zapisu plików, trzyma te pliki w pamięci i tam to się wszystko wykonuje<br/>
+          <p class="lesson__text">
+            npm install<br />
+            npm run start - uruchamia się webpack dev server, za każdym razem
+            jak zaczynamy pracę<br />
+            info o adresie naszej strony: http://localhost:8080/
+          </p>
 
-    najlepiej przykleić nasz index do tego co już jest<br/>
-usuwamy powiązania ze skryptami i stylami, nie potrzebujemy odniesień<br/>
-pamiętać żeby podmienić ścieżki<br/>
-w index.js podpinamy style
+          <p class="lesson__text">
+            możemy wyjść z serwera za pomocą ctr c i serwer przestaje działać<br />
+            src to źródło naszej strony, tutaj pracujemy<br />
+            ścieżki podajemy względem katalogu src, względem plików źródłowych
+            nie serwerowych<br />
+            nie ma katalogu dist bo jest uruchomiony w trybie developerskim bez
+            trybu zapisu plików, trzyma te pliki w pamięci i tam to się wszystko
+            wykonuje<br />
 
-    
-    w package json mamy 3 skrypty: start, build, publish<br/>
-    
-    npm run build tworzy się katalog dist, katalog wynikowy
-</p>
-</article>
+            najlepiej przykleić nasz index do tego co już jest<br />
+            usuwamy powiązania ze skryptami i stylami, nie potrzebujemy
+            odniesień<br />
+            pamiętać żeby podmienić ścieżki<br />
+            w index.js podpinamy style w package json mamy 3 skrypty: start,
+            build, publish<br />
 
-<article class="lesson">
-    <h3 class="lesson__title">Webpack StarterKit - dodawanie nowych plików, sourcemapy</h3>
-
-    <p class="lesson__text">
-        Jak tworzymy nową podstronę to musimy zmodyfikować webpack.common.js, zmieniamy nazwy na nazwy pliku, i ścieżkę.
-po zmianie konfiguracji webpacka musimy zrestartować serwer</br/>
-nie trzeba definiować stylów i skryptów
-
-
-    </p>
-
-    <p class="lesson__text">
-        jeśli chcemy dołączyć jeden niż więcej plik javascriptowy do strony, albo coś unikalnego do strony, osobny plik na jedną podstronę w js.
-    musimy to zdefiniować w entry wtedy zostanie skopiowane do dista<br/>
-    chunks: tablice , podajemy te js-y, które mają nam wyskoczyć<br/>
-    dobrze nazywać te pliki jsowe tak samo jak htmlowe<br/>
-    
-    w index.js importujemy plik ze stylami, one nie lądują w js ale w osobnym jsowym po wywołaniu dista<br/>
-    
-    w main.scss importujemy modules/hello.scss
-    </p>
-
-    <p class="lesson__text">
-        @ import”~normalize.css” ten plik cssowy jest importowany z node modules, zobaczymy to w packit json, trzeba pobrać paczkę i dołączyć z tym znaczkiem ~ w ten sposób importujemy rzeczy w sassie z node modules<br/>
-    
-    albo też import zmiennych sassowych _variables.scss
-    </p>
-
-<p class="lesson__text">
-    sourcemapa<br/>
-    source -> pages <br/>
-    i widzimy te style dokładnie w którym miejscu tym pliku w którym pracujemy developerskim jest ta linijka
-    tak samo z jsowymi widzimy<br/>
-    generalnie chodzi o to, że widzimy pliki dokładnie tak jak mamy w edytorze
-    tego na produkcję nie wrzucamy
-</p>
-
-    </article>
-
-    <article class="lesson">
-        <h3 class="lesson__title">WTF Webpack StarterKit - budowanie projektu i publikacja
-        </h3>
-    
-        <p class="lesson__text">
-            npm run build<br/>
-tworzy się katalog dist, jest wynikiem naszej pracy, zawartość tego katalogu publikujemy na serwerze, pracując wcześniej robiliśmy właśnie taki katalog, to co idzie na serwer ta wersja produkcyjna
-tego katalogu nie commitujemy dodajemy do .gitignore<br/>
-katalog public - pliki, które mają być wrzucone na serwer bez mielenia ich webpackiem np. robots.txt blokuje robotom z przeglądarki dostęp do naszej strony albo pozwalać na indexowanie, favicony, ale pamiętać, że w html podajemy dobrą ścieżkę<br/>
-wszystko z public kopiowane jest na dist
-        </p>
-
-
-        <img class="lesson__image" src="../assets/img/webpackJPG.JPG" alt="webpack">
-
-        <p class="lesson__text">
-            Nie edytujemy nic w katalogu dist<br/>
-    
-    My chcemy trzymać w repozytorium tylko kod, który jest potrzebny do zbudowania naszej strony.
-        </p>
-
-<p class="lesson__text">
-    Master branch, pokaże nam się zawartość pliku read me ale my chcemy naszą stronę
-    robimy npm run publish, ta komenda korzysta z narzędzia o nazwie gh pages, to narzędzie kopiuje naszą zawartość do osobnej gałęzi w gicie, żeby tam trzymać wygenerowaną stronę ale żeby nie była to główna gałąź na której pracujemy
-</p>
-
-<p class="lesson__text">
-    potem w gh pages zmieniamy na gh pages branch<br/>
-    potem widzimy, że stworzyła się druga gałąź, mamy teraz 2 branche<br/>
-    push zwykły nie zaktualizuje nam tego dlatego to trzeba ręcznie kiedy chcemy już ją opublikować
-</p>
-
-<p class="lesson__text">
-    Obsługa błędów, czytamy błędy
-</p>
-
-
-
-
-
+            npm run build tworzy się katalog dist, katalog wynikowy
+          </p>
         </article>
 
+        <article class="lesson">
+          <h3 class="lesson__title">
+            Webpack StarterKit - dodawanie nowych plików, sourcemapy
+          </h3>
 
+          <p class="lesson__text">
+            Jak tworzymy nową podstronę to musimy zmodyfikować
+            webpack.common.js, zmieniamy nazwy na nazwy pliku, i ścieżkę. po
+            zmianie konfiguracji webpacka musimy zrestartować serwer<br />
+            nie trzeba definiować stylów i skryptów
+          </p>
 
-    </section>
-</main>
-<footer class="footer">
-Anna się uczy 2020.
-<a class="footer__link" href="#top">Powrót na górę strony</a>
-</footer>
+          <p class="lesson__text">
+            jeśli chcemy dołączyć jeden niż więcej plik javascriptowy do strony,
+            albo coś unikalnego do strony, osobny plik na jedną podstronę w js.
+            musimy to zdefiniować w entry wtedy zostanie skopiowane do dista<br />
+            chunks: tablice , podajemy te js-y, które mają nam wyskoczyć<br />
+            dobrze nazywać te pliki jsowe tak samo jak htmlowe<br />
 
-</body>
+            w index.js importujemy plik ze stylami, one nie lądują w js ale w
+            osobnym jsowym po wywołaniu dista<br />
+
+            w main.scss importujemy modules/hello.scss
+          </p>
+
+          <p class="lesson__text">
+            @ import”~normalize.css” ten plik cssowy jest importowany z node
+            modules, zobaczymy to w packit json, trzeba pobrać paczkę i dołączyć
+            z tym znaczkiem ~ w ten sposób importujemy rzeczy w sassie z node
+            modules<br />
+
+            albo też import zmiennych sassowych _variables.scss
+          </p>
+
+          <p class="lesson__text">
+            sourcemapa<br />
+            source -> pages <br />
+            i widzimy te style dokładnie w którym miejscu tym pliku w którym
+            pracujemy developerskim jest ta linijka tak samo z jsowymi
+            widzimy<br />
+            generalnie chodzi o to, że widzimy pliki dokładnie tak jak mamy w
+            edytorze tego na produkcję nie wrzucamy
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">
+            WTF Webpack StarterKit - budowanie projektu i publikacja
+          </h3>
+
+          <p class="lesson__text">
+            npm run build<br />
+            tworzy się katalog dist, jest wynikiem naszej pracy, zawartość tego
+            katalogu publikujemy na serwerze, pracując wcześniej robiliśmy
+            właśnie taki katalog, to co idzie na serwer ta wersja produkcyjna
+            tego katalogu nie commitujemy dodajemy do .gitignore<br />
+            katalog public - pliki, które mają być wrzucone na serwer bez
+            mielenia ich webpackiem np. robots.txt blokuje robotom z
+            przeglądarki dostęp do naszej strony albo pozwalać na indexowanie,
+            favicony, ale pamiętać, że w html podajemy dobrą ścieżkę<br />
+            wszystko z public kopiowane jest na dist
+          </p>
+
+          <img
+            class="lesson__image"
+            src="../assets/img/webpackJPG.JPG"
+            alt="webpack"
+          />
+
+          <p class="lesson__text">
+            Nie edytujemy nic w katalogu dist<br />
+
+            My chcemy trzymać w repozytorium tylko kod, który jest potrzebny do
+            zbudowania naszej strony.
+          </p>
+
+          <p class="lesson__text">
+            Master branch, pokaże nam się zawartość pliku read me ale my chcemy
+            naszą stronę robimy npm run publish, ta komenda korzysta z narzędzia
+            o nazwie gh pages, to narzędzie kopiuje naszą zawartość do osobnej
+            gałęzi w gicie, żeby tam trzymać wygenerowaną stronę ale żeby nie
+            była to główna gałąź na której pracujemy
+          </p>
+
+          <p class="lesson__text">
+            potem w gh pages zmieniamy na gh pages branch<br />
+            potem widzimy, że stworzyła się druga gałąź, mamy teraz 2 branche<br />
+            push zwykły nie zaktualizuje nam tego dlatego to trzeba ręcznie
+            kiedy chcemy już ją opublikować
+          </p>
+
+          <p class="lesson__text">
+            Obsługa błędów, czytamy błędy
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      Anna się uczy 2020.
+      <a class="footer__link" href="#top">Powrót na górę strony</a>
+    </footer>
+  </body>
 </html>
